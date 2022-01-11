@@ -1,0 +1,8 @@
+.comment{
+    padding: 10px;
+}
+
+.comment:hover{
+    border: 1px solid chartreuse;
+    box-sizing: border-box;
+}

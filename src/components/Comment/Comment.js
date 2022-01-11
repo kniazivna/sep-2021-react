@@ -1,9 +1,11 @@
+import "./Comment.css"
+
 const Comment = (props) => {
 
     const {postId, id, name, email, body} = props;
 
     return (
-        <div>
+        <div className={'comment'}>
             <p> postId: {postId};</p>
             <p> id: {id};</p>
             <p> name: {name};</p>

@@ -1,0 +1,8 @@
+.post{
+    padding: 10px;
+}
+
+.post:hover{
+    border: 1px solid yellow;
+    box-sizing: border-box;
+}

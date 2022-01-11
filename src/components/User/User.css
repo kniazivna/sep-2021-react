@@ -1,0 +1,8 @@
+.user{
+    padding: 10px;
+}
+
+.user:hover{
+    border: 1px solid yellow;
+    box-sizing: border-box;
+}

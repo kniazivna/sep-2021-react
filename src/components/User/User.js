@@ -1,10 +1,12 @@
+import "./User.css"
+
 const User = (props) => {
 
     const {id, name, username, email, street, suite, city, zipcode, lat, lng, phone, website, companyName,
         catchPhrase, bs} = props;
 
     return (
-        <div>
+        <div className={'user'}>
            <p> id: {id};</p>
            <p> name: {name};</p>
            <p> username: {username};</p>

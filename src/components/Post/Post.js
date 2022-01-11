@@ -1,9 +1,11 @@
+import "./Post.css"
+
 const Post = (props) => {
 
     const {userId, id, title, body} = props;
 
     return (
-        <div>
+        <div className={'post'}>
             <p> userId: {userId};</p>
             <p> id: {id};</p>
             <p> title: {title};</p>
