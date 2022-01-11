@@ -2,15 +2,17 @@ import React, {useEffect, useState} from 'react';
 
 import Post from "../Post/Post";
 
+import "./Posts.css"
+
 
 const Posts = () => {
 
-    let [posts, setposts] = useState([]);
+    const [posts, setPosts] = useState([]);
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts')
             .then(response => response.json())
-            .then(value => setposts(value))
+            .then(value => setPosts(value))
     },[])
 
     return (

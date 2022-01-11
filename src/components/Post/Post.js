@@ -1,6 +1,6 @@
 const Post = (props) => {
 
-    let {userId, id, title, body} = props;
+    const {userId, id, title, body} = props;
 
     return (
         <div>

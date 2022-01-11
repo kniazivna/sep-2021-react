@@ -2,16 +2,4 @@
     display: flex;
     flex-wrap: wrap;
 }
-.w50{
-    width: 50%;
-    background-color: chartreuse;
-    padding: 10px;
-    box-sizing: border-box;
-}
-.w100{
-    width: 100%;
-    background-color: yellow;
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
-}
+

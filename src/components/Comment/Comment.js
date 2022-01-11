@@ -1,6 +1,6 @@
 const Comment = (props) => {
 
-    let {postId, id, name, email, body} = props;
+    const {postId, id, name, email, body} = props;
 
     return (
         <div>

@@ -1,6 +1,6 @@
 const User = (props) => {
 
-    let {id, name, username, email, street, suite, city, zipcode, lat, lng, phone, website, companyName,
+    const {id, name, username, email, street, suite, city, zipcode, lat, lng, phone, website, companyName,
         catchPhrase, bs} = props;
 
     return (
