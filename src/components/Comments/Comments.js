@@ -14,7 +14,13 @@ const Comments = () => {
 
     return (
         <div className="w100">
-            {comments.map(value => <Comment key={value.id} postId={value.postId} id={value.id} name={value.name} email={value.email} body={value.body}/>)}
+            {comments.map(value => <Comment key={value.id}
+                                            postId={value.postId}
+                                            id={value.id}
+                                            name={value.name}
+                                            email={value.email}
+                                            body={value.body}
+            />)}
         </div>
     );
 };

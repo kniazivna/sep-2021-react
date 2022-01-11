@@ -14,7 +14,12 @@ const Posts = () => {
 
     return (
         <div className="w50">
-            {posts.map(value => <Post key={value.id} userId={value.userId} id={value.id} title={value.title} body={value.body}/>)}
+            {posts.map(value => <Post key={value.id}
+                                      userId={value.userId}
+                                      id={value.id}
+                                      title={value.title}
+                                      body={value.body}
+            />)}
         </div>
     );
 };
