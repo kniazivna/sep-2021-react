@@ -1,5 +1,8 @@
 const User = (props) => {
-    let {id, name, username, email, street, suite, city, zipcode, lat, lng, phone, website, companyName, catchPhrase, bs} = props;
+
+    let {id, name, username, email, street, suite, city, zipcode, lat, lng, phone, website, companyName,
+        catchPhrase, bs} = props;
+
     return (
         <div>
            <p> id: {id};</p>
@@ -23,5 +26,6 @@ const User = (props) => {
         </div>
     );
 };
+
 
 export default User;

@@ -4,6 +4,7 @@ import Comment from "../Comment/Comment";
 
 
 const Comments = () => {
+
     let [comments, setcomments] = useState([]);
 
     useEffect(() => {
@@ -24,5 +25,6 @@ const Comments = () => {
         </div>
     );
 };
+
 
 export default Comments;

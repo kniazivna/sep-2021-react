@@ -1,5 +1,7 @@
 const Comment = (props) => {
+
     let {postId, id, name, email, body} = props;
+
     return (
         <div>
             <p> postId: {postId};</p>
@@ -10,5 +12,6 @@ const Comment = (props) => {
         </div>
     );
 };
+
 
 export default Comment;

@@ -30,6 +30,7 @@ const Users = () => {
                                       companyName={value.company.name}
                                       catchPhrase={value.company.catchPhrase}
                                       bs={value.company.bs}
+
             />)}
 
         </div>

@@ -4,6 +4,7 @@ import Post from "../Post/Post";
 
 
 const Posts = () => {
+
     let [posts, setposts] = useState([]);
 
     useEffect(() => {
@@ -23,5 +24,6 @@ const Posts = () => {
         </div>
     );
 };
+
 
 export default Posts;
