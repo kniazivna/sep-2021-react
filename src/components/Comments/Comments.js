@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
 import Comment from "../Comment/Comment";
-
 import "./Comments.css"
-
 
 const Comments = () => {
 
