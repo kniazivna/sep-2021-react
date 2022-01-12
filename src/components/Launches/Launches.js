@@ -4,7 +4,7 @@ import Launch from "../Launch/Launch";
 
 const Launches = () => {
     const[launches, setLaunches] = useState([]);
-    console.log(launches);
+    // console.log(launches);
 
     useEffect(() => {
         fetch('https://api.spacexdata.com/v3/launches/')
@@ -19,7 +19,7 @@ const Launches = () => {
     return (
         <div>
             {launches.map(item =>
-                <Launch key={item.mission_name}
+                <Launch key={item.mission_name}//уточніть,будь ласка, key має тут бути чи перед <Launch після =>, юо не до кінця зрозуміла
                         mission_name={item.mission_name}
                         launch_year={item.launch_year}
                         photo={item.links.mission_patch_small}
