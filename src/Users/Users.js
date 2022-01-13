@@ -7,7 +7,7 @@ import Post from "../User/Post/Post";
 const Users = () => {
     const [users, setUsers] = useState([]);
     const [user, setUser] = useState(null);
-    const [posts, setPosts] = useState(null);
+    const [posts, setPosts] = useState([]);
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
@@ -59,7 +59,7 @@ const Users = () => {
                     <p>name:{user.company.name}</p>
                     <p>catchPhrase:{user.company.catchPhrase}</p>
                     <p>bs:{user.company.bs}</p>
-                    <button onClick={() => getPosts(id)}>Get user posts</button>
+                    <button onClick={() => getPosts()}>Get user posts</button>
                 </div>
             }
             <div className={'post'}>
