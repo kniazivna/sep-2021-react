@@ -10,7 +10,7 @@ const getDetails = (id) => {
 }
 
 const getPosts = (id) => {
-    fetch('https://jsonplaceholder.typicode.com/users/'+ id + '/posts')
+    return fetch('https://jsonplaceholder.typicode.com/users/'+ id + '/posts')
         .then(value => value.json())
 }
 

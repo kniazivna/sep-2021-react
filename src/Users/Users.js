@@ -6,7 +6,6 @@ import Post from "../User/Post/Post";
 import {userServices} from "../services/user.services";
 
 
-
 const Users = () => {
     const [users, setUsers] = useState([]);
     const [user, setUser] = useState(null);
@@ -22,14 +21,14 @@ const Users = () => {
     const getDetails = (id) => {
         // fetch('https://jsonplaceholder.typicode.com/users/' + id)
         //     .then(value => value.json())
-        userServices.getDetails()
+        userServices.getDetails(id)
             .then(value => setUser(value))
     }
 
     const getPosts = (id) => {
         // fetch('https://jsonplaceholder.typicode.com/users/' + user.id + '/posts')
         //     .then(value => value.json())
-        userServices.getPosts()
+        userServices.getPosts(id)
             .then(value => setPosts(value))
         // console.log(id);
     }
@@ -65,7 +64,7 @@ const Users = () => {
                     <p>name:{user.company.name}</p>
                     <p>catchPhrase:{user.company.catchPhrase}</p>
                     <p>bs:{user.company.bs}</p>
-                    <button onClick={() => getPosts()}>Get user posts</button>
+                    <button onClick={() => getPosts(user.id)}>Get user posts</button>
                 </div>
             }
             <div className={'posts'}>
@@ -77,9 +76,9 @@ const Users = () => {
                 }
             </div>
 
-            </div>
-            );
-            };
+        </div>
+    );
+};
 
 
-            export default Users;
+export default Users;
