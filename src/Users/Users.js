@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 import User from "../User/User";
 import './Users.css'
-// import Post from "../User/Post/Post";
+import Post from "../User/Post/Post";
 
 const Users = () => {
     const [users, setUsers] = useState([]);

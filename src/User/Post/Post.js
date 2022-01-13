@@ -1,11 +1,11 @@
-// import React from 'react';
-//
-// const Post = ({user: {userId, id, title}, body}) => {
-//     return (
-//         <div>
-//
-//         </div>
-//     );
-// };
-//
-// export default Post;
+import React from 'react';
+
+const Post = ({post: {userId, id, title}, body}) => {
+    return (
+        <div>
+
+        </div>
+    );
+};
+
+export default Post;
