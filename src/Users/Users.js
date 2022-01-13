@@ -62,7 +62,7 @@ const Users = () => {
                     <button onClick={() => getPosts()}>Get user posts</button>
                 </div>
             }
-            <div className={'post'}>
+            <div className={'posts'}>
                 {
                     posts.map(value => <Post
                         key={value.id}

@@ -1,0 +1,9 @@
+.post{
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    min-height: fit-content;
+    background-color: darkgray;
+    padding: 1%;
+    margin: 1%;
+}

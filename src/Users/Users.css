@@ -5,20 +5,26 @@ body{
 .userList{
     display: flex;
     flex-wrap: wrap;
-}
-.user{
-    width: 45%;
-    padding: 2%;
 
 }
-.details{
-    width: 45%;
+.user, .details{
+    width: 46%;
     padding: 2%;
-    box-sizing: border-box;
+    min-height: 700px;
 }
-.post{
+.user{
+    background-color: lightslategrey;
+}
+.details{
+ background-color: grey;
+}
+
+button{
+    border: none;
+    background: plum;
+    color: purple;
+    margin: 20px;
+}
+.posts{
     width: 100%;
-    padding: 2%;
-    box-sizing: border-box;
-    text-align: center;
 }
