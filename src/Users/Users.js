@@ -7,7 +7,6 @@ import Post from "../User/Post/Post";
 const Users = () => {
     const [users, setUsers] = useState([]);
     const [user, setUser] = useState(null);
-    const [allPosts, setAllPosts] = useState([]);
     const [posts, setPosts] = useState(null);
 
     useEffect(() => {
@@ -21,17 +20,12 @@ const Users = () => {
             .then(value => value.json())
             .then(value => setUser(value))
     }
-    useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/posts')
-            .then(value => value.json())
-            .then(value => setAllPosts(value))
-    }, [])
 
-    const getPosts = (userId) => {
+    const getPosts = (id) => {
         fetch('https://jsonplaceholder.typicode.com/users/' + user.id + '/posts')
             .then(value => value.json())
             .then(value => setPosts(value))
-        console.log(userId);
+        console.log(id);
     }
 
 
@@ -65,26 +59,18 @@ const Users = () => {
                     <p>name:{user.company.name}</p>
                     <p>catchPhrase:{user.company.catchPhrase}</p>
                     <p>bs:{user.company.bs}</p>
-                    <button onClick={() => getPosts(userId)}>Get user posts</button>
+                    <button onClick={() => getPosts(id)}>Get user posts</button>
                 </div>
             }
             <div className={'post'}>
                 {
-                    allPosts.map(value => <div>
+                    posts.map(value => <Post
                         key={value.id}
                         post={value}
-                        }
-                    </div>)
+                    />)
                 }
             </div>
-                {
-                    posts && <div className={'posts'}>
-                        <p>User id: {post.userId}</p>
-                        <p>Id: {post.id}</p>
-                        <p>{post.title}</p>
-                        <p>{post.body}</p>
-                    </div>
-                }
+
             </div>
             );
             };
