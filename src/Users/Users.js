@@ -3,6 +3,9 @@ import React, {useEffect, useState} from 'react';
 import User from "../User/User";
 import './Users.css'
 import Post from "../User/Post/Post";
+import {userServices} from "../services/user.services";
+
+
 
 const Users = () => {
     const [users, setUsers] = useState([]);
@@ -10,22 +13,25 @@ const Users = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(value => value.json())
+        // fetch('https://jsonplaceholder.typicode.com/users')
+        //     .then(value => value.json())
+        userServices.getAll()
             .then(value => setUsers(value))
     }, [])
 
     const getDetails = (id) => {
-        fetch('https://jsonplaceholder.typicode.com/users/' + id)
-            .then(value => value.json())
+        // fetch('https://jsonplaceholder.typicode.com/users/' + id)
+        //     .then(value => value.json())
+        userServices.getDetails()
             .then(value => setUser(value))
     }
 
     const getPosts = (id) => {
-        fetch('https://jsonplaceholder.typicode.com/users/' + user.id + '/posts')
-            .then(value => value.json())
+        // fetch('https://jsonplaceholder.typicode.com/users/' + user.id + '/posts')
+        //     .then(value => value.json())
+        userServices.getPosts()
             .then(value => setPosts(value))
-        console.log(id);
+        // console.log(id);
     }
 
 
