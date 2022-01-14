@@ -5,34 +5,25 @@ import './Users.css'
 import Post from "../User/Post/Post";
 import {userServices} from "../services/user.services";
 
-
 const Users = () => {
     const [users, setUsers] = useState([]);
     const [user, setUser] = useState(null);
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        // fetch('https://jsonplaceholder.typicode.com/users')
-        //     .then(value => value.json())
         userServices.getAll()
             .then(value => setUsers(value))
     }, [])
 
     const getDetails = (id) => {
-        // fetch('https://jsonplaceholder.typicode.com/users/' + id)
-        //     .then(value => value.json())
         userServices.getDetails(id)
             .then(value => setUser(value))
     }
 
     const getPosts = (id) => {
-        // fetch('https://jsonplaceholder.typicode.com/users/' + user.id + '/posts')
-        //     .then(value => value.json())
         userServices.getPosts(id)
             .then(value => setPosts(value))
-        // console.log(id);
     }
-
 
     return (
         <div className={'userList'}>
@@ -79,6 +70,5 @@ const Users = () => {
         </div>
     );
 };
-
 
 export default Users;
