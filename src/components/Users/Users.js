@@ -1,14 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
+import {useState, useEffect} from "react";
 
 import User from "../User/User";
 import './Users.css'
-import Post from "../Post/Post";
 import {userServices} from "../../services/user.services";
 
-const Users = () => {
+const Users = ({getPosts}) => {
     const [users, setUsers] = useState([]);
     const [user, setUser] = useState(null);
-    const [posts, setPosts] = useState([]);
 
     useEffect(() => {
         userServices.getAll()
@@ -18,11 +17,6 @@ const Users = () => {
     const getDetails = (id) => {
         userServices.getDetails(id)
             .then(value => setUser(value))
-    }
-
-    const getPosts = (id) => {
-        userServices.getPosts(id)
-            .then(value => setPosts(value))
     }
 
     return (
@@ -55,17 +49,9 @@ const Users = () => {
                     <p>name:{user.company.name}</p>
                     <p>catchPhrase:{user.company.catchPhrase}</p>
                     <p>bs:{user.company.bs}</p>
-                    <button onClick={() => getPosts(user.id)}>Get user posts</button>
+                    <button onClick={() => getPosts(id)}>Get user posts</button>
                 </div>
             }
-            <div className={'posts'}>
-                {
-                    posts.map(value => <Post
-                        key={value.id}
-                        post={value}
-                    />)
-                }
-            </div>
 
         </div>
     );

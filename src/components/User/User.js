@@ -1,5 +1,3 @@
-import React from 'react';
-
 const User = ({user: {id, name, username}, getDetails}) => {
 
     return (
@@ -7,6 +5,8 @@ const User = ({user: {id, name, username}, getDetails}) => {
             {id}--{name}--{username}
             <button onClick={()=>getDetails(id)}>Get details</button>
         </p>
+
+
     );
 };
 
