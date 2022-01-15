@@ -4,7 +4,7 @@ import './App.css'
 import Users from "./components/Users/Users";
 import UserDetails from "./components/UserDetails/UserDetails";
 import Posts from "./components/Posts/Posts";
-import {postsService} from "./services/posts.service";
+
 
 const App = () => {
 
