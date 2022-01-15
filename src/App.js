@@ -20,7 +20,6 @@ const App = () => {
         setUserId(id)
     }
 
-
     return (
         <div>
             <div className={'wrapper'}>

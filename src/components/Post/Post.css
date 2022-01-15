@@ -1,0 +1,9 @@
+.post{
+    margin: 1%;
+    background-color: darkgray;
+    text-align: center;
+    padding: 1%;
+}
+.post:hover{
+    background-color: rgb(192, 187, 187);
+}
