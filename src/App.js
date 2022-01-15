@@ -1,27 +1,37 @@
-import {useEffect, useState} from "react";
+import React, {useState} from 'react';
 
-import './App.css';
 import Users from "./components/Users/Users";
+import Details from "./components/Details/Details";
 import Posts from "./components/Posts/Posts";
+import './App.css'
 import {postServices} from "./services/post.services";
 
+const App = () => {
 
-
-function App() {
-
+    const [user,setUser] = useState(null);
     const [posts, setPosts] = useState([]);
 
-   const getPosts = (id) => {
+    const getUser = (user) => {
+setUser(user);
+setPosts([]);
+    }
+
+    const getUserId = (id) => {
         postServices.getPosts(id)
             .then(value => setPosts(value))
     }
 
+
     return (
-        <div className="App">
-            <Users getPosts={{getPosts}}/>
-            <Posts posts={posts}/>
+        <div>
+            <div className={'wrapper'}>
+                <Users getUser={getUser}/>
+                {user && <Details user={user} getUserId={getUserId}/>}
+            </div>
+            {!!posts.length && <Posts posts={posts}/>}
         </div>
     );
-}
+};
+
 
 export default App;

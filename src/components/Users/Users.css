@@ -2,31 +2,9 @@ body{
     margin: 0 auto;
     padding: 0;
 }
-.userList{
-    display: flex;
-    flex-wrap: wrap;
-
-}
-.user, .details{
+ .details{
     width: 46%;
     padding: 2%;
     min-height: 700px;
-}
-.user{
-    background-color: lightslategrey;
-}
-.details{
- background-color: grey;
-}
-
-button{
-    border: 1px solid white;
-    border-radius: 5px;
-    background: dimgray;
-    color: white;
-    margin: 20px;
-    padding: 5px;
-}
-.posts{
-    width: 100%;
+     background-color: darkgray;
 }

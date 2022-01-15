@@ -3,12 +3,6 @@ const getAll = () => {
         .then(value => value.json())
 }
 
-const getDetails = (id) => {
-    return fetch(`https://jsonplaceholder.typicode.com/users/`+ id )
-        .then(value => value.json())
-}
-
 export const userServices = {
-    getAll,
-    getDetails
+    getAll
 }

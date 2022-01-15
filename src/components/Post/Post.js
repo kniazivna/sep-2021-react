@@ -1,8 +1,10 @@
 import React from 'react';
 
-import "./Post.css"
+import './Post.css'
 
-const Post = ({post: {userId, id, title, body}}) =>{
+const Post = ({post}) => {
+
+    const {userId, id, title, body} = post;
 
     return (
         <div className={'post'}>

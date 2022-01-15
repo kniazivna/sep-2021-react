@@ -1,0 +1,17 @@
+.user{
+    display: flex;
+    justify-content: space-between;
+    margin: 1%;
+}
+button{
+    padding: 5px;
+    background-color: dimgray;
+    border-radius: 5px;
+    border: 1px solid white;
+    color: white;
+}
+button:hover{
+    background-color: white;
+    border: dimgray;
+    color: dimgray;
+}

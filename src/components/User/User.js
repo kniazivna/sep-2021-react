@@ -1,12 +1,16 @@
-const User = ({user: {id, name, username}, getDetails}) => {
+import React from 'react';
+
+import './User.css'
+
+const User = ({user,getUser}) => {
+
+    const {id,name, username} = user;
 
     return (
-        <p>
-            {id}--{name}--{username}
-            <button onClick={()=>getDetails(id)}>Get details</button>
-        </p>
-
-
+        <div className={'user'}>
+            <p>Id: {id}--{name}--{username}</p>
+            <button onClick={() => getUser(user)}>User details</button>
+        </div>
     );
 };
 
