@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserDetails = ({user}) => {
+const UserDetails = ({user,getUserId}) => {
 
     const {id, name, username, email,address:{street,suite,city, zipcode,geo:{lat, lng}}, phone, website,
         company} = user;
@@ -25,6 +25,7 @@ const UserDetails = ({user}) => {
            <p>company name: {company.name}</p>
            <p>catchPhrase: {company.catchPhrase}</p>
            <p>bs: {company.bs}</p>
+            <button onClick={() => getUserId(id)}>Show user posts</button>
         </div>
     );
 };

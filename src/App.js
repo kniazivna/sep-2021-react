@@ -9,18 +9,25 @@ import {postsService} from "./services/posts.service";
 const App = () => {
 
     const [user, setUser] = useState(null);
+    const [userId, setUserId] = useState(null);
 
-    const getUser = (user) =>{
-setUser(user)
+    const getUser = (user) => {
+        setUser(user);
+        setUserId(null);
     }
+
+    const getUserId = (id) => {
+        setUserId(id)
+    }
+
 
     return (
         <div>
-          <div className={'wrapper'}>
-            <Users getUser={getUser}/>
-              {user && <UserDetails user={user}/>}
-          </div>
-            <Posts/>
+            <div className={'wrapper'}>
+                <Users getUser={getUser}/>
+                {user && <UserDetails user={user} getUserId={getUserId}/>}
+            </div>
+            {userId && <Posts userId={userId}/>}
         </div>
     );
 };
