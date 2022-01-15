@@ -1,11 +1,28 @@
-import './App.css';
+import React, {useState} from 'react';
 
-function App() {
-  return (
-<div>
+import './App.css'
+import Users from "./components/Users/Users";
+import UserDetails from "./components/UserDetails/UserDetails";
+import Posts from "./components/Posts/Posts";
+import {postsService} from "./services/posts.service";
 
-</div>
-  );
-}
+const App = () => {
+
+    const [user, setUser] = useState(null);
+
+    const getUser = (user) =>{
+setUser(user)
+    }
+
+    return (
+        <div>
+          <div className={'wrapper'}>
+            <Users getUser={getUser}/>
+              {user && <UserDetails user={user}/>}
+          </div>
+            <Posts/>
+        </div>
+    );
+};
 
 export default App;

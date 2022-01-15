@@ -1,0 +1,19 @@
+.user{
+    display: flex;
+    justify-content: space-between;
+    margin: 1%;
+}
+.user:hover{
+    background-color: rgba(169, 169, 169, 0.44);
+}
+button{
+    border: 1px solid white;
+    border-radius: 5%;
+    color: white;
+    background: dimgray;
+}
+button:hover{
+    border: 1px solid dimgray;
+    color: dimgray;
+    background: white;
+}
