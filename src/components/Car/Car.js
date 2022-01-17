@@ -10,9 +10,7 @@ const Car = ({car, update}) => {
         carsService.deleteById(id)
             .then(value => update(value));
     }
-    const change = (id) => {
-        //delete car
-
+    // const change = (id) => {
     //     carsService.updateById(id)
     //         .then(value => {
     //             if (value.model !== 'www') {
@@ -21,6 +19,7 @@ const Car = ({car, update}) => {
     //             update(value)
     //         })
     // }
+
 
     return (
         <div>
