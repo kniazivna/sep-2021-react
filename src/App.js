@@ -14,7 +14,7 @@ const App = () => {
   return (
       <div>
           <Form update={update}/>
-          { item && <Cars item={item} update={update}/>}
+          <Cars item={item} update={update}/>
       </div>
   );
 };
