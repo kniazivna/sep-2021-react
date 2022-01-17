@@ -6,12 +6,6 @@ const App = () => {
 
     //add car
    const [item, setItem] = useState(null);
-   // //delete
-    const [elem, setElem] =useState(null);
-
-    const remover = (car) => {
-      setElem(car);
-    }
 
    const update = (info) => {
        setItem(info);
@@ -20,7 +14,7 @@ const App = () => {
   return (
       <div>
           <Form update={update}/>
-          <Cars item={item} remover={remover} elem={elem}/>
+          <Cars item={item} update={update}/>
       </div>
   );
 };

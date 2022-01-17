@@ -1,14 +1,14 @@
 import React from 'react';
 import {carsService} from "../../services/cars.services";
 
-const Car = ({car, remover}) => {
+const Car = ({car, update}) => {
 
     const {id, model, price, year} = car;
 
     const remove = (id) => {
         //delete car
         carsService.deleteById(id)
-            .then(value => remover(value));
+            .then(value => update(value));
     }
 
 

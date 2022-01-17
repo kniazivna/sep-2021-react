@@ -8,12 +8,6 @@ const Form = ({update}) => {
 
     const submit = (car) => {
         //створюємо car
-        //НЕПРАВИЛЬНО!!!!!!!
-       // const item = carsService.create(car)
-       //      .then(value => console.log(value));
-       // update(item);//оновлюється масив з машинами
-
-        //ПРАВИЛЬНО!!!!!
         carsService.create(car)
              .then(value => update(value));
     }
