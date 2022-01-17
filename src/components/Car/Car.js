@@ -10,7 +10,17 @@ const Car = ({car, update}) => {
         carsService.deleteById(id)
             .then(value => update(value));
     }
+    const change = (id) => {
+        //delete car
 
+    //     carsService.updateById(id)
+    //         .then(value => {
+    //             if (value.model !== 'www') {
+    //                 car.model = 'zzzzz';
+    //             }
+    //             update(value)
+    //         })
+    // }
 
     return (
         <div>
@@ -19,6 +29,7 @@ const Car = ({car, update}) => {
             <p>Price: {price}</p>
             <p>Year: {year}</p>
             <button onClick={() => remove(id)}>Delete</button>
+            <button onClick={() => change(id)}>Change</button>
 
         </div>
     );
