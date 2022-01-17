@@ -1,8 +1,17 @@
 import React from 'react';
+import {carsService} from "../../services/cars.services";
 
-const Car = ({car}) => {
+const Car = ({car, remover}) => {
 
     const {id, model, price, year} = car;
+
+    const remove = (id) => {
+        //delete car
+        const elem = carsService.deleteById(id)
+            .then(value => console.log(value));
+        remover(elem);
+    }
+
 
     return (
         <div>
@@ -10,7 +19,8 @@ const Car = ({car}) => {
             <p>Model: {model}</p>
             <p>Price: {price}</p>
             <p>Year: {year}</p>
-            <button>Delete</button>
+            <button onClick={() => remove(id)}>Delete</button>
+
         </div>
     );
 };
