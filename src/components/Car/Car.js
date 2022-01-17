@@ -7,9 +7,8 @@ const Car = ({car, remover}) => {
 
     const remove = (id) => {
         //delete car
-        const elem = carsService.deleteById(id)
-            .then(value => console.log(value));
-        remover(elem);
+        carsService.deleteById(id)
+            .then(value => remover(value));
     }
 
 
