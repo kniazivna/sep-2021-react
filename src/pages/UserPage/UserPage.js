@@ -36,7 +36,7 @@ const UserPage = () => {
                     <p>Id: {user.id}</p>
                     <p>Name: {user.name}</p>
                     <h3>Username: {user.username}</h3>
-                    {/*<button onClick={}>User details</button>*/}
+                    <button>User details</button>
                     <div>
                         <Outlet/>
                     </div>

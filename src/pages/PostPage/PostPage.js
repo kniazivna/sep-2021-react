@@ -6,7 +6,7 @@ const PostPage = () => {
 
     const {id} = useParams();
     const [post, setPost] = useState(null);
-    const [postId, setPostId] = useState(null);
+
 
     const {state} = useLocation();
     const navigate = useNavigate();
@@ -35,7 +35,7 @@ const PostPage = () => {
                     <p>User id: {post.userId}</p>
                     <h3>Title: {post.title}</h3>
                     <p>Body: {post.body}</p>
-                    {/*<button onClick={}>Post details</button>*/}
+                    <button>Post details</button>
                     <div>
                         <Outlet/>
                     </div>
