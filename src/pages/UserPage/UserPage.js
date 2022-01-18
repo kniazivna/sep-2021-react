@@ -1,22 +1,23 @@
 import React, {useEffect, useState} from 'react';
 import {Outlet, useLocation, useNavigate, useParams} from "react-router-dom";
 import {postsService} from "../../services/posts.servise";
+import {usersService} from "../../services/users.servise";
 
-const PostPage = () => {
+const UserPage = () => {
 
     const {id} = useParams();
-    const [post, setPost] = useState(null);
-    const [postId, setPostId] = useState(null);
+    const [user, setUser] = useState(null);
+
 
     const {state} = useLocation();
     const navigate = useNavigate();
 
     useEffect(() => {
         if (state) {
-            setPost(state);
+            setUser(state);
             return
         }
-        postsService.getById(id)
+        usersService.getById(id)
             .then(value => setPost({...value}));
     }, [])
 
@@ -31,11 +32,10 @@ const PostPage = () => {
             <button onClick={back}>Back</button>
             {post && (
                 <div>
-                    <p>Id: {post.id}</p>
-                    <p>User id: {post.userId}</p>
-                    <h3>Title: {post.title}</h3>
-                    <p>Body: {post.body}</p>
-                    <button onClick={}>Post details</button>
+                    <p>Id: {user.id}</p>
+                    <p>Name: {user.name}</p>
+                    <h3>Username: {user.username}</h3>
+                    <button onClick={}>User details</button>
                     <div>
                         <Outlet/>
                     </div>
@@ -46,4 +46,4 @@ const PostPage = () => {
     );
 };
 
-export default PostPage;
+export default UserPage;
