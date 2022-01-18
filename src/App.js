@@ -7,6 +7,7 @@ import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import PostPage from "./pages/PostPage/PostPage";
 import CommentsPage from "./pages/CommentsPage/CommentsPage";
 import UserPostsPage from "./pages/UserPostsPage/UserPostsPage";
+import UserPage from "./pages/UserPage/UserPage";
 
 
 function App() {

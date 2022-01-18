@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 import {postsService} from "../../services/posts.servise";
 import Post from "../../components/Post/Post";
 import {Outlet} from "react-router-dom";
-import css from "./PostPage.module.css"
+import css from "./PostsPage.module.css";
 
 const PostsPage = () => {
 

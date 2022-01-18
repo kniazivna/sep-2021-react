@@ -3,6 +3,7 @@ import {Outlet, useLocation, useNavigate, useParams} from "react-router-dom";
 
 import {usersService} from "../../services/users.servise";
 
+
 const UserPage = () => {
 
     const {id} = useParams();
