@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Outlet, useLocation, useNavigate, useParams} from "react-router-dom";
-import {postsService} from "../../services/posts.servise";
+
 import {usersService} from "../../services/users.servise";
 
 const UserPage = () => {
@@ -18,7 +18,7 @@ const UserPage = () => {
             return
         }
         usersService.getById(id)
-            .then(value => setPost({...value}));
+            .then(value => setUser({...value}));
     }, [])
 
     const back = () => {
@@ -30,12 +30,12 @@ const UserPage = () => {
 
         <div>
             <button onClick={back}>Back</button>
-            {post && (
+            {user && (
                 <div>
                     <p>Id: {user.id}</p>
                     <p>Name: {user.name}</p>
                     <h3>Username: {user.username}</h3>
-                    <button onClick={}>User details</button>
+                    {/*<button onClick={}>User details</button>*/}
                     <div>
                         <Outlet/>
                     </div>

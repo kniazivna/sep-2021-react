@@ -35,7 +35,7 @@ const PostPage = () => {
                     <p>User id: {post.userId}</p>
                     <h3>Title: {post.title}</h3>
                     <p>Body: {post.body}</p>
-                    <button onClick={}>Post details</button>
+                    {/*<button onClick={}>Post details</button>*/}
                     <div>
                         <Outlet/>
                     </div>
