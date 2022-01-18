@@ -21,7 +21,7 @@ function App() {
                     </Route>
                     <Route path={'posts'} element={<PostsPage/>}>
                         <Route path={':id'} element={<PostPage/>}>
-                            <Route path={':postId'} element={<UsrPostsPage/>}/>
+                            <Route path={':postId'} element={<UserPostsPage/>}/>
                         </Route>
                     </Route>
                     <Route path={'*'} element={<NotFoundPage/>}/>
