@@ -7,14 +7,12 @@ const App = () => {
     //add car
    const [item, setItem] = useState(null);
 
-   const update = (info) => {
-       setItem(info);
-    }
+
 
   return (
       <div>
-          <Form update={update}/>
-          <Cars item={item} update={update}/>
+          <Form update={setItem}/>
+          <Cars item={item} update={setItem}/>
       </div>
   );
 };

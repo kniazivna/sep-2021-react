@@ -11,11 +11,10 @@ const Car = ({car, update}) => {
             .then(value => update(value));
     }
     const change = (id) => {
-        carsService.updateById(id)
+        carsService.updateById(id, {model:'OKA'})
             .then(value => {
-                if (value.model !== 'www') {
-                    car.model = 'zzzzz';
-                }
+                if (value.model !== 'www')
+
                 update(value);
             })
     }
