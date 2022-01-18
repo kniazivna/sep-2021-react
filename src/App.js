@@ -19,12 +19,12 @@ function App() {
                 <Route path={'/'} element={<Layout/>}>
                     <Route path={'/'} element={<UsersPage/>}>
                         <Route path={':id'} element={<UserPage/>}>
-                            <Route path={':userId'} element={<CommentsPage/>}/>
+                            <Route path={'posts'} element={<UserPostsPage/>}/>
                         </Route>
                     </Route>
                     <Route path={'posts'} element={<PostsPage/>}>
                         <Route path={':id'} element={<PostPage/>}>
-                            <Route path={':postId'} element={<UserPostsPage/>}/>
+                            <Route path={'comments'} element={<CommentsPage/>}/>
                         </Route>
                     </Route>
                     <Route path={'*'} element={<NotFoundPage/>}/>
