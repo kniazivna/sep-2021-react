@@ -14,8 +14,9 @@ function App() {
          <Routes>
              <Route path={'/'} element={<Layout/>}>
                  <Route path={'/'} element={<UsersPage/>}/>
-                 <Route path={'posts'} element={<PostsPage/>}/>
-                 <Route path={'posts/:id'} element={<PostPage/>}/>
+               <Route path={'posts'} element={<PostsPage/>}>
+                   <Route path={':id'} element={<PostPage/>}/>
+               </Route>
                  <Route path={'*'} element={<NotFoundPage/>}/>
              </Route>
          </Routes>
