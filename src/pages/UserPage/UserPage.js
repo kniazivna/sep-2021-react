@@ -8,6 +8,7 @@ const UserPage = () => {
 
     const {id} = useParams();
     const [user, setUser] = useState(null);
+    // const [userId, setUserId] = useState(null);
 
 
     const {state} = useLocation();
