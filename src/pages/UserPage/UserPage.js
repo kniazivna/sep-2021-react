@@ -20,7 +20,7 @@ const UserPage = () => {
         }
         usersService.getById(id)
             .then(value => setUser({...value}));
-    }, [])
+    }, [id])
 
     const back = () => {
         navigate(-1)
