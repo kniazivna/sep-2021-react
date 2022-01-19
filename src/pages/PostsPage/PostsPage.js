@@ -16,8 +16,6 @@ const PostsPage = () => {
     return (
         <div>
             <h1>Posts page</h1>
-            <div>
-            <h1>Posts page</h1>
                 <div className={css.wrapper}>
                     <div>
                         {
@@ -28,7 +26,6 @@ const PostsPage = () => {
                         <Outlet/>
                     </div>
                 </div>
-        </div>
         </div>
     );
 };
