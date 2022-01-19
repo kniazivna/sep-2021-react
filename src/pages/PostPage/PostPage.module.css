@@ -1,0 +1,18 @@
+.postBlock{
+    background-color: pink;
+    margin: 4%;
+    padding: 5%;
+}
+button{
+    padding: 2%;
+    background: floralwhite;
+    color: fuchsia;
+    border: 1px solid fuchsia;
+    border-radius: 10px;
+    font-weight: bold;
+}
+button:hover{
+    background: fuchsia;
+    color: floralwhite;
+    border: floralwhite;
+}

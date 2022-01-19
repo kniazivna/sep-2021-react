@@ -17,7 +17,7 @@ const PostsPage = () => {
         <div>
             <h1>Posts page</h1>
                 <div className={css.wrapper}>
-                    <div>
+                    <div className={css.postsBlock}>
                         {
                             posts.map(value => <Post key={value.id} post={value}/>)
                         }

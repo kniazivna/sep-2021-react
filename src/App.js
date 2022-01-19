@@ -17,7 +17,7 @@ function App() {
         <>
             <Routes>
                 <Route path={'/'} element={<Layout/>}>
-                    <Route path={'/'} element={<UsersPage/>}>
+                    <Route path={''} element={<UsersPage/>}>
                         <Route path={':id'} element={<UserPage/>}>
                             <Route path={'posts'} element={<UserPostsPage/>}/>
                         </Route>

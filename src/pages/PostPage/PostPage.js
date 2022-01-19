@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {Outlet, useLocation, useNavigate, useParams} from "react-router-dom";
+import {Link, Outlet, useLocation, useNavigate, useParams} from "react-router-dom";
+
 import {postsService} from "../../services/posts.servise";
+import css from "./PostPage.module.css"
 
 const PostPage = () => {
 
@@ -27,7 +29,7 @@ const PostPage = () => {
 
     return (
 
-        <div>
+        <div className={css.postBlock}>
             <button onClick={back}>Back</button>
             {post && (
                 <div>
@@ -35,7 +37,7 @@ const PostPage = () => {
                     <p>User id: {post.userId}</p>
                     <h3>Title: {post.title}</h3>
                     <p>Body: {post.body}</p>
-                    <button>Post details</button>
+                    <Link to={'comments'}><button>Show post's comments</button></Link>
                     <div>
                         <Outlet/>
                     </div>

@@ -1,3 +1,7 @@
 .wrapper{
     display: flex;
 }
+.postsBlock{
+    width: 50%;
+    padding: 1%;
+}

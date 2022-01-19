@@ -18,7 +18,7 @@ const UsersPage = () => {
             <h1>Users page</h1>
             <div>
                 <div className={css.wrapper}>
-                    <div>
+                    <div className={css.usersBlock}>
                         {
                             users.map(value => <User key={value.id} user={value}/>)
                         }
