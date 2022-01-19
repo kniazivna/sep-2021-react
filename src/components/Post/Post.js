@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import css from "../Post/Post.module.css";
 
-
 const Post = ({post}) => {
 
     const {id, title} = post;

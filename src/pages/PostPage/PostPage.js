@@ -26,7 +26,6 @@ const PostPage = () => {
         navigate(-1)
     }
 
-
     return (
 
         <div className={css.postBlock}>

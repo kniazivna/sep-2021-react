@@ -4,12 +4,10 @@ import {Link, Outlet, useLocation, useNavigate, useParams} from "react-router-do
 import {usersService} from "../../services/users.servise";
 import css from "./UserPage.module.css";
 
-
 const UserPage = () => {
 
     const {id} = useParams();
     const [user, setUser] = useState(null);
-
 
 
     const {state} = useLocation();
@@ -28,9 +26,7 @@ const UserPage = () => {
         navigate(-1)
     }
 
-
     return (
-
         <div className={css.usersBlock}>
             <button onClick={back}>Back</button>
             {user && (

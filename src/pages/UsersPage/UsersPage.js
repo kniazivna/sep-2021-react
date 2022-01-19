@@ -13,6 +13,7 @@ const UsersPage = () => {
         usersService.getAll()
             .then(value => setUsers([...value]));
     }, [])
+
     return (
         <div>
             <h1>Users page</h1>
