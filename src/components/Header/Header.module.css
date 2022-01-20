@@ -2,11 +2,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: lightblue;
-    color: dimgray;
+    background-color: #c4c3c3;
     gap: 50px;
+    min-height: 100px;
 }
-.header a [class='active']{
-    color: #282c34;
+.header a{
+    color: dimgray;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 30px;
+}
+.header a[class='active']{
+    color: chartreuse;
     text-decoration: underline;
 }

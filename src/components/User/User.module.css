@@ -1,0 +1,16 @@
+.btns{
+    display: flex;
+    gap: 20px;
+}
+button{
+    color: dimgray;
+    border: 2px solid dimgray;
+    background-color: chartreuse;
+    border-radius: 10px;
+}
+button:hover{
+    color: chartreuse;
+    background-color: dimgray;
+    border: chartreuse;
+
+}
