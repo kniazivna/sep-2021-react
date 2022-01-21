@@ -20,6 +20,7 @@ const App = () => {
                     <Route index element={<Navigate to={'users'}/>}/>
 
                     <Route path={'users'} element={<UsersPage/>}>
+
                         <Route path={':id'} element={<UserDetailsPage/>}>
                             <Route path={'posts'} element={<UserPostsPage/>}/>
                         </Route>
@@ -27,6 +28,7 @@ const App = () => {
                         <Route path={':id/albums'} element={<UserAlbumsPage/>}>
                             <Route path={':albumId/photos'} element={<AlbumPhotosPage/>}/>
                         </Route>
+
                     </Route>
 
                     <Route path={'posts'} element={<PostsPage/>}>

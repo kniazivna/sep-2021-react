@@ -7,7 +7,4 @@ export const photosService = {
 
     getById: (albumId) => axiosServise(`${urls.photos}/?albumId=${albumId}`)
         .then(value => value.data),
-
-    getUsersAlbumPhotos: (id,albumId) => axiosServise(`${urls.users}/${id}/albums/${albumId}/photos`)
-        .then(value => value.data)
 }

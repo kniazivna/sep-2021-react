@@ -18,7 +18,7 @@ const UserDetailsPage = () => {
             return
         }
         usersService.getById(id)
-            .then(value => setUser(value));
+            .then(value => setUser({...value}));
     },[id])
 
     const back = () => {

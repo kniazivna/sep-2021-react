@@ -6,6 +6,7 @@ import {Link} from "react-router-dom";
 const User = ({user}) => {
 
     const {id, name, username} = user;
+
     return (
         <div>
            <p>{id}--{name}--{username}</p>
@@ -13,7 +14,7 @@ const User = ({user}) => {
                 <Link to={id.toString()} state={user}>
                     <button>User details </button>
                 </Link>
-                <Link to={`${id.toString()}/albums`} state={user}>
+                <Link to={`${id.toString()}/albums`}>
                     <button>User albums</button>
                 </Link>
             </div>
@@ -21,4 +22,4 @@ const User = ({user}) => {
     );
 };
 
-export default User;
+export {User};
