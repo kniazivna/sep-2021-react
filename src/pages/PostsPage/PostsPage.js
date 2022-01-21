@@ -16,12 +16,12 @@ const PostsPage = () => {
 
     return (
         <div className={css.postsPage}>
-            <div className={css.block}>
+            <div>
                 {
                 posts.map(value => <Post key={value.id} post={value}/>)
             }
             </div>
-            <div>
+            <div className={css.block}>
                 <Outlet/>
             </div>
         </div>
