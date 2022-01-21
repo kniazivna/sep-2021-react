@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Link, Outlet, useLocation, useNavigate, useParams} from "react-router-dom";
 
 import {postsService} from "../../services/posts.service";
-import css from "./PostDetailsPage.module.css"
+
 
 const PostDetailsPage = () => {
 
@@ -25,7 +25,7 @@ const PostDetailsPage = () => {
     }
 
     return (
-        <div className={css.block}>
+        <div>
             <div>
                 <button onClick={back}>Back</button>
                 {

@@ -10,7 +10,7 @@ const Comment = ({comment}) => {
             <p>Id: {id}</p>
             <p>Name: {name}</p>
             <p>Email: {email}</p>
-            <p>Body: {body}</p>
+            <p><span>Body:</span> {body}</p>
         </div>
     );
 };
