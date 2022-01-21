@@ -3,7 +3,6 @@ import {Outlet, useLocation, useNavigate, useParams} from "react-router-dom";
 import {Link} from "react-router-dom";
 
 import {usersService} from "../../services/users.servise";
-import css from './UserDetailPage.module.css';
 
 const UserDetailsPage = () => {
 
@@ -27,7 +26,7 @@ const UserDetailsPage = () => {
 
     return (
         <div>
-            <div className={css.block}>
+            <div>
                 <button onClick={back}>Back</button>
                 {user && (
                     <div>

@@ -16,12 +16,12 @@ const UsersPage = () => {
 
     return (
         <div className={css.usersPage}>
-            <div className={css.block}>
+            <div>
                 {
                     users.map(value => <User key={value.id} user={value}/>)
                 }
             </div>
-            <div>
+            <div className={css.block}>
                 <Outlet/>
             </div>
         </div>
