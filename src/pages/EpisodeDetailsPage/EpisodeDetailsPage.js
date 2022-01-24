@@ -8,7 +8,8 @@ const EpisodeDetailsPage = () => {
     const {state} = useLocation();
     const {name, episode, air_date, characters} = state;
 
-    console.log(...characters);
+    const charact = [...characters];
+    console.log(charact);
 
 
     return (
