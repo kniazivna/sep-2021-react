@@ -1,0 +1,16 @@
+.header{
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+}
+.header h1{
+    color: lightslategrey;
+    font-size: 40px;
+    padding: 1%;
+}
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+}

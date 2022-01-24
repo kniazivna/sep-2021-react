@@ -1,0 +1,14 @@
+.episode{
+    background-color: lavender;
+    color: black;
+    width: 20%;
+    padding: 1%;
+    margin: 1%;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.episode span{
+    font-weight: bold;
+}
