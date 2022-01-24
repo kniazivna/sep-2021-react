@@ -11,6 +11,10 @@ const EpisodeDetailsPage = () => {
     const charact = [...characters];
     console.log(charact);
 
+    const newCharact = [];
+    charact.map(value => newCharact.push(+value.slice(42,45)));
+    console.log(newCharact);
+
 
     return (
         <>
