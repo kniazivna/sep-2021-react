@@ -20,7 +20,6 @@ const EpisodesPage = () => {
             </div>
             <div className={css.wrap}>
                 {
-
                     episodes.map(value => <Episode key={value.id} episod={value}/>)
                 }
             </div>

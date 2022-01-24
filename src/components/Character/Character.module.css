@@ -1,0 +1,19 @@
+.wrap{
+    width: 21%;
+}
+
+.character{
+    color: black;
+    padding: 2%;
+    margin: 1%;
+    font-size: 14px;
+}
+.character span{
+    font-weight: bold;
+}
+.img{
+    margin: 0 auto;
+}
+.photo img{
+    width: 100%;
+}

@@ -13,7 +13,6 @@ function App() {
                     <Route index element={<EpisodesPage/>}/>
                     <Route path={':id'} element={<EpisodeDetailsPage/>}/>
 
-
                 </Route>
             </Routes>
 

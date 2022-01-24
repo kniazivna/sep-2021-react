@@ -12,3 +12,6 @@
 .episode span{
     font-weight: bold;
 }
+.episode img{
+    width: 200px;
+}
