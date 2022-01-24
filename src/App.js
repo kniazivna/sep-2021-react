@@ -12,7 +12,9 @@ const App = () => {
   return (
       <div>
           <Form update={setItem}/>
+          {/*тут сетаємо наш апдейт*/}
           <Cars item={item} update={setItem}/>
+          {/*item - це наш тригер*/}
       </div>
   );
 };
