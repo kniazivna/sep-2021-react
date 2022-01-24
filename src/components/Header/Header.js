@@ -1,12 +1,13 @@
 import React from 'react';
 
 import css from "./Header.module.css";
+import {NavLink} from "react-router-dom";
 
 const Header = () => {
     return (
         <>
             <div className={css.header}>
-                <p>The Rick and Morty</p>
+                <NavLink to={'/'}>The Rick and Morty</NavLink>
             </div>
         </>
     );

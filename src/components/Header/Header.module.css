@@ -12,8 +12,10 @@
 }
 .header a{
     text-decoration: none;
+    color: lavender;
 }
-.header a [class='active']{
+.header a[class='active']{
     text-decoration: underline;
     color: darkslateblue;
+    font-weight: bold;
 }

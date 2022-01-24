@@ -1,0 +1,15 @@
+.header{
+    background-color: lightblue;
+    text-align: center;
+    padding: 1%;
+    font-size: 12px;
+    line-height: 14px;
+    color: dimgray;
+}
+.header h1{
+    color: lightslategrey;
+    font-size: 18px;
+}
+.header span{
+    font-weight: bold;
+}
