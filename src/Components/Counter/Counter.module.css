@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.main{
+    margin: 10px auto;
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: bold;
+    min-height: 150px;
+    max-width: 300px;
+    border: 2px solid darkgray;
+}
+.counter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+}
+button{
+    margin: 10px;
+    padding: 10px;
+    font-size: 14px;
+}
+.btn {
+    width: 220px;
+    margin-left: 40px;
+}
