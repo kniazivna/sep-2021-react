@@ -1,22 +1,25 @@
 import React, {useReducer} from 'react';
 
-import css from "./Counter.module.css";
+import css from "./Counters.module.css";
 import reducer from "../../Counter.reducer/count.reducer";
+import Counter1 from "../Counter1/Counter1";
 
-const Counter = () => {
+const Counters = () => {
 
     const [state, dispatch] = useReducer(reducer, {counter1: 0, counter2: 0, counter3: 0});
 
     return (
         <>
-            <div className={css.main}>
-                <div className={css.counter}>
-                    <button onClick={() => dispatch({type: 'increment'})}>Increment</button>
-                    <div>{state.counter1}</div>
-                    <button onClick={() => dispatch({type: 'decrement'})}>Decrement</button>
-                </div>
-                <button className={css.btn} onClick={() => dispatch({type: 'reset'})}>Reset</button>
-            </div>
+            {/*Тут варто розбивати ці каунтери на компоненти? Як наприклад я з Counter1 зробила?*/}
+            {<Counter1 dispatch={dispatch} state={state.counter1}/>}
+            {/*<div className={css.main}>*/}
+            {/*    <div className={css.counter}>*/}
+            {/*        <button onClick={() => dispatch({type: 'increment'})}>Increment</button>*/}
+            {/*        <div>{state.counter1}</div>*/}
+            {/*        <button onClick={() => dispatch({type: 'decrement'})}>Decrement</button>*/}
+            {/*    </div>*/}
+            {/*    <button className={css.btn} onClick={() => dispatch({type: 'reset'})}>Reset</button>*/}
+            {/*</div>*/}
 
             <div className={css.main}>
                 <div className={css.counter}>
@@ -39,4 +42,4 @@ const Counter = () => {
     );
 };
 
-export default Counter;
+export default Counters;

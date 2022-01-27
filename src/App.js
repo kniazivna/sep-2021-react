@@ -1,10 +1,10 @@
-import Counter from "./Components/Counter/Counter";
+import Counters from "./Components/Counters/Counters";
 
 function App() {
 
     return (
         <>
-            <Counter/>
+            <Counters/>
         </>
     );
 }
