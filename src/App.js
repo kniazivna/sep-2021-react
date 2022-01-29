@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import {Cars, Form} from "./components";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+
+    const [cars, setCars] = useState([]);
+
+    const getFormData = (data) => {
+        setCars([...cars, {id: new Date().getTime(), ...data}])
+    }
+
+    const getCarId = (id) => {
+        setCars(cars =>cars.filter(car => car.id !== id))
+    }
+
+    return (
+        <div>
+            <Form/>
+            <Cars getCarId={getCarId}/>
+
+        </div>
+    );
+};
 
 export default App;
