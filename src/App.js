@@ -1,23 +1,34 @@
 import {useReducer, useRef} from "react";
 
-import './App.css';
+import './App.module.css';
+import Dog from "./components/Dog/Dog";
+import Cat from "./components/Cat/Cat";
 
 const reducer = (state, action) => {
 
     switch (action.type) {
 
         case 'add':
+
             if (action.target === 'cat') {
-                return {...state, cat: [...state.cat, action.data]}
-            } else if (action.target === 'dog') {
-                return {...state, dog: [...state.dog, action.data]}
+                return {...state, cat: [...state.cat, action.data.catWithId]}
+            }
+            else if (action.target === 'dog') {
+                return {...state, dog: [...state.dog, action.data.dogWithId]}
             }
             break;
 
-        case 'delete':
-            if (action.target === 'dog') {
-                return {...state, dog: [...state.dog, action.data]}
+        case 'remove':
+            if (action.target === 'cat') {
+                return {...state, cat: state.cat.filter(catWithId => catWithId.id !== action.data.id)}
             }
+            else if(action.target === 'dog') {
+                return {...state, dog: state.dog.filter(dogWithId => dogWithId.id !== action.data.id)}
+            }
+            break;
+
+        default:
+            return state;
     }
 }
 
@@ -31,28 +42,31 @@ function App() {
     const catCreator = (e) => {
         e.preventDefault();
         const cat = catRef.current.value;
-        dispatch({type: 'add', target: 'cat', data: cat})
+        const catWithId = {
+            id: Date.now(),
+            cat
+        }
+        dispatch({type: 'add', target: 'cat', data: {catWithId}})
+        catRef.current.value = '';
     }
 
     const dogCreator = (e) => {
         e.preventDefault();
         const dog = dogRef.current.value;
-        dispatch({type: 'add', target: 'dog', data: dog})
+        const dogWithId = {
+            id: Date.now(),
+            dog
+        }
+        dispatch({type: 'add', target: 'dog', data: {dogWithId}})
+        dogRef.current.value = '';
     }
 
-    // const catRemover = (e) => {
-    //     e.preventDefault();
-    //     const cat = document.getElementById().innerHTML = '';
-    //     // cat.classList.add('hidden');
-    //     dispatch({type: 'delete', target: 'cat', data: cat})
-    // }
+    const catRemover = (id) => {
+        dispatch({type: 'remove', target: 'cat', data: {id}})
+    }
 
-    const dogRemover = (e) => {
-        e.preventDefault();
-        const dog = document.getElementById().classList.toggle('hidden');
-
-        // dog.classList.toggle('hidden');
-        dispatch({type: 'delete', target: 'dog', data: dog})
+    const dogRemover = (id) => {
+        dispatch({type: 'remove', target: 'dog', data: {id}})
     }
 
     return (
@@ -64,20 +78,10 @@ function App() {
                 <button onClick={dogCreator}>Save</button>
             </form>
 
-            <div className={'block'}>
+            <div>
                 <div className={'animals'}>
-                    {/*{(state.cat).map(value => <div className={'cat'} key={(state.cat).indexOf(value)}*/}
-                    {/*                               id={(state.cat).indexOf(value)}>*/}
-                    {/*    <p>{value}</p>*/}
-                    {/*    <button>Delete</button>*/}
-                    {/*</div>)}*/}
-                </div>
-                <div className={'animals'}>
-                    {(state.dog).map(value => <div className={'dog'} key={(state.dog).indexOf(value)}
-                                                   id={(state.dog).indexOf(value)}>
-                        <p>{value}</p>
-                        <button onClick={dogRemover}>Delete</button>
-                    </div>)}
+                    <Cat cats={state.cat} catRemover={catRemover}/>
+                    <Dog dogs={state.dog} dogRemover={dogRemover}/>
                 </div>
             </div>
         </>
