@@ -1,0 +1,27 @@
+.listCreator{
+    text-align: center;
+    background-color: rgba(127, 255, 0, 0.1);
+    padding: 1%;
+    color: darkseagreen;
+    height: 100vh;
+}
+.listCreator button{
+    background-color: darkgray;
+    color: chartreuse;
+    margin-left: 2px;
+    border: 1px solid chartreuse;
+border-radius: 5px;
+}
+.listCreator button:hover{
+    background-color: chartreuse;
+    color: darkgray;
+    border: 1px solid darkgray;
+}
+.listCreator input{
+    border: none;
+    background-color: rgba(127, 255, 0, 0.2);
+    color: dimgray;
+}
+.listCreator input{
+    border: none;
+}

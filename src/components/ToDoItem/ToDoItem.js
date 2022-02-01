@@ -1,17 +1,35 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
+import {useDispatch, useSelector} from "react-redux";
+
+import css from './ToDoItem.module.css';
+import {toDoListActions} from "../../store";
+import toDoListReducer from "../../store/toDoList.slice";
+
 
 const ToDoItem = ({toDoItem}) => {
 
-    const itemRef = useRef();
+    const {id, whatToDo, status} = toDoItem;
+    const dispatch = useDispatch();
+    const {toDoList} = useSelector(state => state['toDoListReducer']);
 
-    useEffect(() => {
 
-    },[])
+    const deleteItem = (e) => {
+        e.preventDefault();
+        dispatch(toDoListActions.deleteToDoItem({id}))
+    }
 
-const {id, whatToDo} = toDoItem;
+    const checkToDoItem = () => {
+        dispatch(toDoListActions.checkToDoItem({id}))
+    }
+
+
     return (
-        <div>
-            <input type="checkbox" ref={itemRef}/><span>{whatToDo}</span>
+        <div className={css.list}>
+            <div className={css.container}>
+                <label className={status ? css.checked : ''}> <input type="checkbox" value={status}
+                                                                     onChange={checkToDoItem}/>{whatToDo}</label>
+                <button onClick={deleteItem}>Delete</button>
+            </div>
         </div>
     );
 };

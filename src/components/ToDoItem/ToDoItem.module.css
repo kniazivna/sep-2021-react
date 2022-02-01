@@ -1,0 +1,13 @@
+.checked{
+    text-decoration: line-through;
+}
+.list{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1%;
+}
+.container{
+    align-items: start;
+    max-width: fit-content;
+    margin-left: 35%;
+}

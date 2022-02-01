@@ -6,22 +6,23 @@ import {useSelector} from "react-redux";
 import {toDoListActions} from "../../store";
 import {ToDoItem} from "../ToDoItem/ToDoItem";
 import toDoListReducer from "../../store/toDoList.slice";
+import css from './CreateToDoList.module.css';
 
 const CreateToDoList = () => {
 
-    const {toDoList} = useSelector(state => state['toDoListReducer']);
+    const {toDoList, doneItemCounter} = useSelector(state => state['toDoListReducer']);
 
     const {handleSubmit, register, reset} = useForm();
     const dispatch = useDispatch();
 
     const submit = (data) => {
         dispatch(toDoListActions.addToDoItem({data}))
-        console.log(data);
         reset()
     }
 
     return (
-        <div>
+        <div className={css.listCreator}>
+            <h1>All: {toDoList.length} Completed:{doneItemCounter} </h1>
             <form onSubmit={handleSubmit(submit)}>
                 <label>Write To Do item: <input type="text" {...register('whatToDo')}/></label>
                 <button>Save</button>
