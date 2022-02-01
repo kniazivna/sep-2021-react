@@ -1,8 +1,12 @@
-function App() {
-    return (
-        <div>
+import {CreateToDoList} from "./components";
 
-        </div>
+function App() {
+
+    return (
+
+        <>
+            <CreateToDoList/>
+        </>
     )
 }
 
