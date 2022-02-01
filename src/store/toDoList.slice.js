@@ -1,6 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
 
-
 const toDoList = createSlice({
     name: 'toDoList.slice',
     initialState: {

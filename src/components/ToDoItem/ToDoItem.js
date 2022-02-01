@@ -1,17 +1,13 @@
 import React from 'react';
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 
 import css from './ToDoItem.module.css';
 import {toDoListActions} from "../../store";
-import toDoListReducer from "../../store/toDoList.slice";
-
 
 const ToDoItem = ({toDoItem}) => {
 
     const {id, whatToDo, status} = toDoItem;
     const dispatch = useDispatch();
-    const {toDoList} = useSelector(state => state['toDoListReducer']);
-
 
     const deleteItem = (e) => {
         e.preventDefault();
