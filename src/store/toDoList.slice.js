@@ -16,7 +16,7 @@ const toDoList = createSlice({
         },
         deleteToDoItem: (state, action) => {
             state.toDoList = state.toDoList.filter(item => item.id !== action.payload.id)
-            if(!state.toDoList.status){
+            if(action.payload.status){
                 --state.doneItemCounter;
             }
         },

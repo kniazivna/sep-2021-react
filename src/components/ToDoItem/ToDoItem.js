@@ -11,7 +11,7 @@ const ToDoItem = ({toDoItem}) => {
 
     const deleteItem = (e) => {
         e.preventDefault();
-        dispatch(toDoListActions.deleteToDoItem({id}))
+        dispatch(toDoListActions.deleteToDoItem({id,status}))
     }
 
     const checkToDoItem = () => {
