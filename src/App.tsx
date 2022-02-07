@@ -1,10 +1,20 @@
-import React from 'react';
+import React, {FC} from 'react';
+import {Navigate, Route, Routes} from "react-router-dom";
 
-const App = () => {
+import {Layout} from "./components";
+import {UsersPage, PostsPage} from "./pages";
+
+const App:FC = () => {
     return (
-        <div>
+        <Routes>
+            <Route path={'/'} element={<Layout/>}>
 
-        </div>
+                <Route index element={<Navigate to={'users'}/>}/>
+                <Route path={'users'} element={<UsersPage/>}/>
+                <Route path={'posts'} element={<PostsPage/>}/>
+
+            </Route>
+        </Routes>
     );
 };
 
